@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ArenaX · Torneos de videojuegos</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="torneos.html">Torneos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="canjea.html">Canjea</a></li>
+    </ul>
+  </nav>
+<a class="skip" href="#lista">Saltar a los torneos</a>
+<header class="top">
+  <h1>ArenaX</h1>
+  <button id="btnMis" class="btn btn-sec" type="button" data-accion="irMis">Mis inscripciones: <strong id="contador">0</strong></button>
+</header>
+<main>
+  <section class="filtros" aria-label="Filtros de torneos">
+    <label>Buscar<input id="texto" type="search" placeholder="Nombre del torneo"></label>
+    <label>Juego<select id="juego"><option value="todos">Todos los juegos</option></select></label>
+    <label>Estado<select id="estado">
+      <option value="todos">Todos</option>
+      <option value="disponibles">Con cupos</option>
+      <option value="inscritos">Inscritos</option>
+      <option value="llenos">Cupos llenos</option>
+    </select></label>
+  </section>
+  <p id="resultados" class="info" aria-live="polite"></p>
+  <section id="lista" class="grid" aria-label="Lista de torneos"></section>
+  <section id="mis" aria-labelledby="tMis">
+    <h2 id="tMis">Mis inscripciones</h2>
+    <ul id="listaMis" class="mis"></ul>
+  </section>
+</main>
+<dialog id="modal" aria-labelledby="mTitulo"></dialog>
+<div id="aviso" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
